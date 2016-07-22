@@ -1,0 +1,53 @@
+/* 整个网站的公共样式 */
+.u-head {
+	width:100%;
+	background-color:#fff
+}
+.u-content {
+	background-color:#f2f6f8;
+	padding-top:30px
+}
+.u-footer {
+	background-color:#6e8e00
+}
+.min-width {
+	width:1200px;
+	min-width:1200px;
+	margin:0 auto
+}
+.u-head>div {
+	height:58px;
+	background:darkcyan
+}
+.u-footer>div {
+	height:200px;
+	background:#4C4F52
+}
+.list-color {
+	background-color:#fff;
+	position:relative;
+	box-shadow:3px 0  #bae71e inset
+}
+.cur {
+	color:#6e8e00 !important
+}
+.nav-border:after {
+	position:absolute;
+	left:2px;
+	top:50%;
+	content:".";
+	font-size:0;
+	border:3px solid #bae71e;
+	transform:rotate(45deg) translateX(-50%)
+}
+
+
+
+
+
+
+
+
+
+
+
