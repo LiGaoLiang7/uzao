@@ -1,6 +1,6 @@
 var gulp      = require('gulp');
 var sass      = require('gulp-sass');
-// var concat    = require('gulp-concat');
+var concat    = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
 // var uglify    = require('gulp-uglify'); //最小化js
 // var imagemin  = require('gulp-imagemin');

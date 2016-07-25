@@ -23,23 +23,6 @@
 	height:200px;
 	background:#4C4F52
 }
-.list-color {
-	background-color:#fff;
-	position:relative;
-	box-shadow:3px 0  #bae71e inset
-}
-.cur {
-	color:#6e8e00 !important
-}
-.nav-border:after {
-	position:absolute;
-	left:2px;
-	top:50%;
-	content:".";
-	font-size:0;
-	border:3px solid #bae71e;
-	transform:rotate(45deg) translateX(-50%)
-}
 
 
 

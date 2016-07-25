@@ -7,7 +7,7 @@
 
 html {
   box-sizing:border-box;
-  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; //opinionated
+  font-family: 'Microsoft YaHei',Arial,Helvetica,sans-serif; //opinionated
   font-size:14px;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -206,6 +206,7 @@ sup {
 
 img {
   border-style: none;
+  display: block;
 }
 
 /**

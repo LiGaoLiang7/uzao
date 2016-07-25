@@ -313,11 +313,9 @@
               Types
 *******************************/
 
-
 /*--------------
     Selection
 ---------------*/
-
 
 /* Displays like a select box */
 .ui.selection.dropdown {
@@ -328,11 +326,11 @@
   outline: 0;
   -webkit-transform: rotateZ(0deg);
           transform: rotateZ(0deg);
-  min-width: 14em;
   min-height: 2.7142em;
   background: #ffffff;
   display: inline-block;
-  padding: 0.78571429em 2.6em 0.78571429em 1em;
+  min-width: 13em;
+  padding: 0.92900000em 2.6em 0.92900000em 1em;
   color: rgba(0, 0, 0, 0.87);
   box-shadow: none;
   border: 1px solid rgba(34, 36, 38, 0.15);

@@ -2,68 +2,217 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="../public/css/public.css" />
-  <link rel="stylesheet" href="../public/css/uz-common.css" />
-  <link rel="stylesheet" href="../home/css/home-common.css" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../public/css/public.css" />
+    <link rel="stylesheet" href="../public/css/uz-common.css" />
+    <link rel="stylesheet" href="../home/css/home-common.css" />
+    
+    <link rel="stylesheet" href="../public/css/plug/flatpickr.min.css">
+  <link rel="stylesheet" href="../public/css/plug/jquery.Jcrop.min.css">
 </head>
 
 <body>
-  <div class="u-head">
-    <div class="min-width"></div>
-  </div>
-  <div class="u-content">
-    <div class="uc-title min-width cf">
-      <span class="my-center">个人中心</span>
-      <div class="ui breadcrumb uc-bread">
-        <a class="section">个人中心</a>
-        <div class="divider"> &gt; </div>
-        <a class="section">个人资料</a>
-      </div>
+    <div class="u-head">
+        <div class="min-width"></div>
     </div>
-    <div class="uc-conbox cf min-width">
-      <div class="conbox-l">
-        <ul>
-          <li class="list-name">我的订单</li>
-        </ul>
-        <ul class="list-color nav-border">
-          <li class="list-name cur">个人资料</li>
-          <li><a href="javascript:;">设置头像</a></li>
-          <li><a href="javascript:;">收货地址</a></li>
-        </ul>
-        <ul>
-          <li class="list-name">安全认证</li>
-          <li><a href="javascript:;">邮箱绑定</a></li>
-          <li><a href="javascript:;">密码修改</a></li>
-          <li><a href="javascript:;">实名认证</a></li>
-        </ul>
-        <ul>
-          <li class="list-name">账户管理</li>
-          <li><a href="javascript:;">交易明细</a></li>
-          <li><a href="javascript:;">银行卡设置</a></li>
-        </ul>
-        <ul>
-          <li class="list-name">我的收藏</li>
-        </ul>
-        <ul>
-          <li class="list-name">我的评价</li>
-        </ul>
-        <ul>
-          <li class="list-name">我的短消息</li>
-        </ul>
-      </div>
-      <div class="content-r">
-        <div>
-          <div class="aboutMe"></div>
-          <div class="avatar"></div>
+    <div class="u-content">
+        <div class="uc-title min-width cf">
+            <span class="my-center">个人中心</span>
+            <div class="ui breadcrumb uc-bread">
+                <a class="section">个人中心</a>
+                <div class="divider"> &gt; </div>
+                <a class="section">个人资料</a>
+            </div>
         </div>
-      </div>
+        <div class="uc-conbox cf min-width">
+            <div class="conbox-l">
+                <ul class="">
+                    <li class="list-name"><a href="javascript:void(0)">我的订单</a></li>
+                </ul>
+                <ul>
+                    <li class="list-name">个人资料</li>
+                    <li><a href="javascript:;" class="active">设置头像</a></li>
+                    <li><a href="javascript:;">收货地址</a></li>
+                </ul>
+                <ul>
+                    <li class="list-name">安全认证</li>
+                    <li><a href="javascript:;">邮箱绑定</a></li>
+                    <li><a href="javascript:;">密码修改</a></li>
+                    <li><a href="javascript:;">实名认证</a></li>
+                </ul>
+                <ul class="ul-active">
+                    <li class="list-name">账户管理</li>
+                    <li><a href="javascript:;" class="active">交易明细</a></li>
+                    <li><a href="javascript:;">银行卡设置</a></li>
+                </ul>
+                <ul>
+                    <li class="list-name"><a href="javascript:void(0)">我的收藏</a></li>
+                </ul>
+                <ul>
+                    <li class="list-name"><a href="javascript:void(0)">我的评价</a></li>
+                </ul>
+                <ul>
+                    <li class="list-name"><a href="javascript:void(0)">我的短消息</a></li>
+                </ul>
+            </div>
+            <div class="content-r">
+                <div class="info-area">
+                    <div class="ui header"><i class="icon user focus-color"></i>个人资料</div>
+                    <div class="forms ui form">
+                        <form action="" id="user-basic-info">
+                            <dl class="required field">
+                                <dt>
+                                    <label for="username">用户名：</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" name="username" placeholder="1385642156" class="inputwidth">
+                                    <div class="ui left pointing basic red mini label" style="display:;">请输入用户名。</div>
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt>
+                                    <label for="nickname">昵称：</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" name="nickname" placeholder="Oliver" class="inputwidth">
+                                    <div class="ui left pointing basic red mini label" style="display:none;">该昵称已经存在。</div>
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt>
+                                    <label for="location">所在城市：</label>
+                                </dt>
+                                <dd id="location_select">
+                                    <select class="level_1 multiSelect ui maxheight dropdown inputwidth"></select>
+                                    <select class="level_2 multiSelect ui maxheight dropdown inputwidth"></select>
+                                    <div class="ui left pointing basic red mini label" style="display:none;">请选择所在城市</div>
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt>
+                                    <label for="gender">性别：</label>
+                                </dt>
+                                <dd class="inline fields">
+                                    <div class="field">
+                                        <div class="ui radio checkbox">
+                                            <input type="radio" name="gender" checked tabindex="0" class="hidden">
+                                            <label>男</label>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="ui radio checkbox">
+                                            <input type="radio" name="gender" tabindex="0" class="hidden">
+                                            <label>女</label>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="ui radio checkbox">
+                                            <input type="radio" name="gender" tabindex="0" class="hidden">
+                                            <label>保密</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt>
+                                    <label for="birth">生日：</label>
+                                </dt>
+                                <dd>
+                                    <div class="ui right icon small input">
+                                        <input type="text" placeholder="请选择.." name="birth" class="inputwidth calendar">
+                                        <i class="users icon"></i>
+                                    </div>
+                                    <div class="ui left pointing basic red mini label" style="display:none;">请选择生日。</div>
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt>
+                                    <label for="jobs">职业：</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" name="jobs" placeholder="" class="inputwidth">
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt>
+                                    <label for="pages">个人主页：</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" name="pages" placeholder="http://">
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt class="middle-container">
+                                    <label for="about" class="middle-content">关于自己：</label>
+                                </dt>
+                                <dd>
+                                    <textarea type="text" name="about" rows="5" placeholder=""></textarea>
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt>
+                                    <label for="email" class="middle-content">邮箱：</label>
+                                </dt>
+                                <dd>
+                                    <span>1385642156@163.com<a href="javascript:void(0)">（修改）</a></span>
+                                </dd>
+                            </dl>
+                            <dl class="field">
+                                <dt>
+                                    <label for="email" class="middle-content">收货地址：</label>
+                                </dt>
+                                <dd>
+                                    <span>陕西省西安市碑林区互助路66号西部电力国际商务中心16楼西安昭泰文化传播有限公司<a href="javascript:void(0)">（修改）</a></span>
+                                </dd>
+                            </dl>
+                            <dl class="field centeraligend">
+                                <ul class="ui primary button mt15">提交</ul>
+                            </dl>
+                        </form>
+                    </div>
+                </div>
+                <div class="avator">
+                	<img src="./images/avator_1.jpg" alt="我的头像">
+					<button class="ui basic button mini fluid mt15">修改头像</button>
+
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="u-footer">
-    <div class="min-width"></div>
-  </div>
+    <div class="u-footer">
+        <div class="min-width"></div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script src="../public/js/checkbox.min.js"></script>
+    <script src="../public/js/transition.min.js"></script>
+    <script src="../public/js/dropdown.min.js"></script>
+    <script src="../public/js/api.min.js"></script>
+    <!--  Plugin flatpickr MultiLinkageSelect  -->
+    <script src="../public/js/plug/flatpickr.js"></script>
+    <script src="../public/js/plug/location.js"></script>
+    <script src="../public/js/plug/LinkageSelect.js"></script>
+    <script>
+    $(function() {
+        $('.checkbox').checkbox();
+        flatpickr('.calendar');
+
+        //选择地址 data来自于location
+        var options = {
+            data: data
+        }
+        var sel = new LinkageSelect(options);
+        sel.bind('#location_select .level_1');
+        sel.bind('#location_select .level_2');
+        $('#location_select select').change(function(event) {
+            $('#location_select select').dropdown();
+            if ($(this).parent('.multiSelect').next('.multiSelect').length > 0) {
+                $(this).parent('.multiSelect').next().children('.text').text("清选择");
+            }
+        });
+        $('#location_select select').dropdown();
+    });
+    </script>
 </body>
 
 </html>
