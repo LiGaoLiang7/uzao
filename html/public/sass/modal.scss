@@ -14,7 +14,7 @@
   top: 50%;
   left: 50%;
   text-align: left;
-  background: #ffffff;
+  background: $modal-bg-color;
   border: none;
   box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
   -webkit-transform-origin: 50% 25%;
@@ -64,18 +64,17 @@
 // ---------------
 .ui.modal > .header {
   display: block;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  background: #ffffff;
+  font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+  background: $modal-bg-color;
   margin: 0em;
   padding: 1.25rem 1.5rem;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.85);
   border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  font-size: 1.142857142857143rem;
 }
 .ui.modal > .header:not(.ui) {
   font-size: 1.42857143rem;
   line-height: 1.2857em;
-  font-weight: bold;
 }
 // --------------
 //      Content
@@ -86,7 +85,7 @@
   font-size: 1em;
   line-height: 1.4;
   padding: 1.5rem;
-  background: #ffffff;
+  background: $modal-bg-color;
 }
 .ui.modal > .image.content {
   display: -webkit-box;
@@ -133,9 +132,9 @@
 //      Actions
 // ---------------
 .ui.modal > .actions {
-  background: #f9fafb;
+  background: $modal-bg-color;
   padding: 1rem 1rem;
-  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  // border-top: 1px solid rgba(34, 36, 38, 0.15);
   text-align: right;
 }
 .ui.modal .actions > .button {

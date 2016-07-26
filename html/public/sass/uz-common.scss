@@ -1,36 +1,119 @@
 /* 整个网站的公共样式 */
+
+@import 'globle.scss';
 .u-head {
-	width:100%;
-	background-color:#fff
+    width: 100%;
+    background-color: #fff
 }
+
 .u-content {
-	background-color:#f2f6f8;
-	padding-top:30px
+    background-color: #f2f6f8;
+    padding-top: 30px
 }
+
 .u-footer {
-	background-color:#6e8e00
+    background-color: #6e8e00
 }
+
 .min-width {
-	width:1200px;
-	min-width:1200px;
-	margin:0 auto
+    width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto
 }
+
 .u-head>div {
-	height:58px;
-	background:darkcyan
-}
-.u-footer>div {
-	height:200px;
-	background:#4C4F52
+    height: 58px;
+    background: darkcyan
 }
 
+.list-color {
+    background-color: #fff;
+    position: relative;
+    box-shadow: 3px 0 #bae71e inset;
+}
+
+.cur {
+    color: #6e8e00 !important;
+}
+
+.nav-border:after {
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    content: ".";
+    font-size: 0;
+    border: 3px solid #bae71e;
+    transform: rotate(45deg) translateX(-50%);
+}
+
+.u-footer {
+    padding: 2.85714286em 0 4.28571429em 0;
+    text-align: center;
+    color: rgb(242, 246, 248);
+    background-color: $btn-font-color;
+}
+
+.u-footer a {
+    font-size: 0.85714286em;
+    color: rgb(242, 246, 248);
+}
+
+.u-footerlist li {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.u-footerlist .f-nav,
+.u-footerlist a {
+    display: block;
+}
+
+.u-footerlist .f-nav {
+    line-height: 1em;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.u-footerlist .f-nav {
+    padding-left: 0.71428571em;
+}
+
+.u-footerlist a {
+    padding-left: 0.8333333em;
+}
 
 
+/*----------------
+        Hover
+ * ------------------*/
+
+.u-footerlist li:hover .f-nav {
+    font-weight: bold;
+}
+
+.u-footer a:hover {
+    color: $btn-submit-bg-color;
+}
+
+.u-footerlist a {
+    padding-right: 8.16666667em;
+    line-height: 2.08333333em;
+}
+
+.u-footerlist span {
+    box-shadow: 1px 0 0 $btn-submit-bg-color inset;
+}
 
 
+/* ---------------------
+            copyright    
+   ----------------------*/
 
+.copy {
+    font-size: 0.85714286em;
+}
 
-
-
-
-
+.c-box {
+    line-height: 25px;
+}

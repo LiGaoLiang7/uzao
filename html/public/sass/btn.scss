@@ -1,6 +1,21 @@
  // * --------------------------
  // * created by seven 20160614
  // * --------------------------
+ 
+ /*---------------
+ * --mender:HanTingting
+ * --time:2016-7-26
+ * Modify Style:
+ * (1).ui.button;
+ * (2).ui.basic.buttons .button,.ui.basic.button ;
+ * (3).ui.small.buttons .button,.ui.small.buttons .or,.ui.small.button;
+ * (4).ui.buttons .button,.ui.buttons .or,.ui.button;
+ * (5).ui.primary.buttons .button,.ui.primary.button;
+ * Added Style:
+ * (1).ui.basic.green.button
+ */
+ 
+ 
  @charset 'utf-8';
  @import 'globle.scss';
  /*******************************
@@ -15,19 +30,19 @@
      border: none;
      vertical-align: baseline;
      background: $btn-normal-bg-color none;
-     color: $btn-color;
+     color: $btn-normal-bg-color;
      font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-     margin: 0em 0.25em 0em 0em;
-     padding: 0.78571429em 1.5em 0.78571429em;
+//   margin: 0em 0.25em 0em 0em;   //no need style --mender HanTingting
+     padding: 0.5em 1em 0.5em;   //mender HanTingting
      text-transform: none;
      text-shadow: none;
-     font-weight: bold;
+//   font-weight: bold;  //no need style --mender HanTingting
      line-height: 1em;
      font-style: normal;
      text-align: center;
      text-decoration: none;
-     border-radius: 0.28571429rem;
-     box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px $btn-shadow-color inset;
+     border-radius: 0.25rem;     //no need style --mender HanTingting
+     box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px $btn-shadow-color inset;  //no need style --mender HanTingting
      -webkit-user-select: none;
      -moz-user-select: none;
      -ms-user-select: none;
@@ -37,6 +52,7 @@
      will-change: '';
      -webkit-tap-highlight-color: transparent;
  }
+ 
  /*--------------
       Hover
 ---------------*/
@@ -118,10 +134,10 @@
      background: transparent none !important;
      color: $btn-color !important;
      font-weight: normal;
-     border-radius: 0.28571429rem;
+     border-radius: 0.25rem;
      text-transform: none;
      text-shadow: none !important;
-     box-shadow: 0px 0px 0px 1px $btn-shadow-color inset;
+     box-shadow: 0px 0px 0px 1px rgba(0,0,0,.5) inset;
  }
  
  .ui.basic.buttons {
@@ -191,8 +207,8 @@
  
  .ui.primary.buttons .button,
  .ui.primary.button {
-     background-color: $btn-primary-bg-color;
-     color: $btn-primary-color;
+     background-color: $btn-submit-bg-color;
+     color: $btn-font-color;
      text-shadow: none;
      background-image: none;
  }
@@ -201,12 +217,12 @@
      box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
  }
  
- .ui.primary.buttons .button:hover,
- .ui.primary.button:hover {
+   .ui.primary.buttons .button:hover,
+   .ui.primary.button:hover {
      background-color: darken($btn-primary-bg-color, 5%);
      color: $btn-primary-color;
      text-shadow: none;
- }
+   }
  
  .ui.primary.buttons .button:focus,
  .ui.primary.button:focus {
@@ -392,9 +408,9 @@
  .ui.small.buttons .button,
  .ui.small.buttons .or,
  .ui.small.button {
-     font-size: 0.92857143rem;
+      font-size: 1rem;   //submit-fontSize --mender HanTingting 
  }
- 
+ // font-size   --mender HanTingting
  .ui.buttons .button,
  .ui.buttons .or,
  .ui.button {
@@ -432,10 +448,21 @@
      background: transparent none !important;
      color: rgba(0, 0, 0, 0.6) !important;
      font-weight: normal;
-     border-radius: 0.28571429rem;
+     border-radius: 0.25rem;
      text-transform: none;
      text-shadow: none !important;
-     box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
+     box-shadow: 0px 0px 0px 1px rgba(0,0,0,.5) inset;
+ }
+ //user-box-shadow --mender HanTingting
+ .ui.basic.green.button{
+    box-shadow: 0 0 0 1px $btn-user-color inset!important;
+    color: $btn-user-color !important;
+ }
+ 
+ .ui.basic.green.button:hover{
+    background: 0 0!important;
+    box-shadow: 0 0 0 1px #d01919 inset!important;
+    color: #d01919!important;
  }
  
  .ui.basic.buttons {
