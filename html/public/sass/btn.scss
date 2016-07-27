@@ -1,7 +1,6 @@
  // * --------------------------
  // * created by seven 20160614
  // * --------------------------
- 
  /*---------------
  * --mender:HanTingting
  * --time:2016-7-26
@@ -14,7 +13,6 @@
  * Added Style:
  * (1).ui.basic.green.button
  */
- 
  
  @charset 'utf-8';
  @import 'globle.scss';
@@ -31,18 +29,18 @@
      vertical-align: baseline;
      background: $btn-normal-bg-color none;
      color: $btn-normal-bg-color;
-     font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-//   margin: 0em 0.25em 0em 0em;   //no need style --mender HanTingting
-     padding: 0.5em 1em 0.5em;   //mender HanTingting
+     // font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+     //   margin: 0em 0.25em 0em 0em;   //no need style --mender HanTingting
+     padding: 0.5em 1em 0.5em; //mender HanTingting
      text-transform: none;
      text-shadow: none;
-//   font-weight: bold;  //no need style --mender HanTingting
+     //   font-weight: bold;  //no need style --mender HanTingting
      line-height: 1em;
      font-style: normal;
      text-align: center;
      text-decoration: none;
-     border-radius: 0.25rem;     //no need style --mender HanTingting
-     box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px $btn-shadow-color inset;  //no need style --mender HanTingting
+     border-radius: 0.25rem; //no need style --mender HanTingting
+     box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px $btn-shadow-color inset; //no need style --mender HanTingting
      -webkit-user-select: none;
      -moz-user-select: none;
      -ms-user-select: none;
@@ -52,7 +50,6 @@
      will-change: '';
      -webkit-tap-highlight-color: transparent;
  }
- 
  /*--------------
       Hover
 ---------------*/
@@ -123,6 +120,7 @@
  /*-------------------
         Basic
 --------------------*/
+ 
  .ui.button,
  .ui.buttons .button,
  .ui.buttons .or {
@@ -137,7 +135,7 @@
      border-radius: 0.25rem;
      text-transform: none;
      text-shadow: none !important;
-     box-shadow: 0px 0px 0px 1px rgba(0,0,0,.5) inset;
+     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .5) inset;
  }
  
  .ui.basic.buttons {
@@ -217,12 +215,12 @@
      box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
  }
  
-   .ui.primary.buttons .button:hover,
-   .ui.primary.button:hover {
+ .ui.primary.buttons .button:hover,
+ .ui.primary.button:hover {
      background-color: darken($btn-primary-bg-color, 5%);
      color: $btn-primary-color;
      text-shadow: none;
-   }
+ }
  
  .ui.primary.buttons .button:focus,
  .ui.primary.button:focus {
@@ -335,6 +333,7 @@
  /*******************************
             Groups
 *******************************/
+ 
  .ui.buttons {
      display: -webkit-inline-box;
      display: -webkit-inline-flex;
@@ -354,6 +353,7 @@
      box-shadow: none;
  }
  /* Clearfix */
+ 
  .ui.buttons:after {
      content: ".";
      display: block;
@@ -362,6 +362,7 @@
      visibility: hidden;
  }
  /* Standard Group */
+ 
  .ui.buttons .button {
      -webkit-box-flex: 1;
      -webkit-flex: 1 0 auto;
@@ -408,8 +409,9 @@
  .ui.small.buttons .button,
  .ui.small.buttons .or,
  .ui.small.button {
-      font-size: 1rem;   //submit-fontSize --mender HanTingting 
+     font-size: 1rem; //submit-fontSize --mender HanTingting 
  }
+ 
  // font-size   --mender HanTingting
  .ui.buttons .button,
  .ui.buttons .or,
@@ -443,6 +445,7 @@
  /*-------------------
         Basic
 --------------------*/
+ 
  .ui.basic.buttons .button,
  .ui.basic.button {
      background: transparent none !important;
@@ -451,18 +454,19 @@
      border-radius: 0.25rem;
      text-transform: none;
      text-shadow: none !important;
-     box-shadow: 0px 0px 0px 1px rgba(0,0,0,.5) inset;
- }
- //user-box-shadow --mender HanTingting
- .ui.basic.green.button{
-    box-shadow: 0 0 0 1px $btn-user-color inset!important;
-    color: $btn-user-color !important;
+     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .5) inset;
  }
  
- .ui.basic.green.button:hover{
-    background: 0 0!important;
-    box-shadow: 0 0 0 1px #d01919 inset!important;
-    color: #d01919!important;
+ //user-box-shadow --mender HanTingting
+ .ui.basic.green.button {
+     box-shadow: 0 0 0 1px $btn-user-color inset!important;
+     color: $btn-user-color !important;
+ }
+ 
+ .ui.basic.green.button:hover {
+     background: 0 0!important;
+     box-shadow: 0 0 0 1px #d01919 inset!important;
+     color: #d01919!important;
  }
  
  .ui.basic.buttons {
@@ -562,56 +566,79 @@
      background-color: rgba(255, 255, 255, 0.15);
      box-shadow: 0px 0px 0px 2px #ffffff inset !important;
  }
-/*-------------------
+ /*-------------------
        Inverted
 --------------------*/
-.ui.inverted.button {
-  box-shadow: 0px 0px 0px 2px #ffffff inset !important;
-  background: transparent none;
-  color: #ffffff;
-  text-shadow: none !important;
-}
-
-/* Group */
-.ui.inverted.buttons .button {
-  margin: 0px 0px 0px -2px;
-}
-.ui.inverted.buttons .button:first-child {
-  margin-left: 0em;
-}
-.ui.inverted.vertical.buttons .button {
-  margin: 0px 0px -2px 0px;
-}
-.ui.inverted.vertical.buttons .button:first-child {
-  margin-top: 0em;
-}
-/* States */
-/* Hover */
-.ui.inverted.button:hover {
-  background: #ffffff;
-  box-shadow: 0px 0px 0px 2px #ffffff inset !important;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-/* Active / Focus */
-.ui.inverted.button:focus,
-.ui.inverted.button.active {
-  background: #ffffff;
-  box-shadow: 0px 0px 0px 2px #ffffff inset !important;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-/* Active Focus */
-.ui.inverted.button.active:focus {
-  background: #dcddde;
-  box-shadow: 0px 0px 0px 2px #dcddde inset !important;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.ui.fluid.buttons,
-.ui.fluid.button {
-  width: 100%;
-}
-.ui.fluid.button {
-  display: block;
-}
+ 
+ .ui.inverted.button {
+     box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+     background: transparent none;
+     color: #ffffff;
+     text-shadow: none !important;
+ }
+ /* Group */
+ 
+ .ui.inverted.buttons .button {
+     margin: 0px 0px 0px -2px;
+ }
+ 
+ .ui.inverted.buttons .button:first-child {
+     margin-left: 0em;
+ }
+ 
+ .ui.inverted.vertical.buttons .button {
+     margin: 0px 0px -2px 0px;
+ }
+ 
+ .ui.inverted.vertical.buttons .button:first-child {
+     margin-top: 0em;
+ }
+ /* States */
+ /* Hover */
+ 
+ .ui.inverted.button:hover {
+     background: #ffffff;
+     box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+     color: rgba(0, 0, 0, 0.8);
+ }
+ /* Active / Focus */
+ 
+ .ui.inverted.button:focus,
+ .ui.inverted.button.active {
+     background: #ffffff;
+     box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+     color: rgba(0, 0, 0, 0.8);
+ }
+ /* Active Focus */
+ 
+ .ui.inverted.button.active:focus {
+     background: #dcddde;
+     box-shadow: 0px 0px 0px 2px #dcddde inset !important;
+     color: rgba(0, 0, 0, 0.8);
+ }
+ /*-------------------
+       Floated
+--------------------*/
+ 
+ .ui[class*="left floated"].buttons,
+ .ui[class*="left floated"].button {
+     float: left;
+     margin-left: 0em;
+     margin-right: 0.25em;
+ }
+ 
+ .ui[class*="right floated"].buttons,
+ .ui[class*="right floated"].button {
+     float: right;
+     margin-right: 0em;
+     margin-left: 0.25em;
+ }
+ 
+ .ui.fluid.buttons,
+ .ui.fluid.button {
+     width: 100%;
+ }
+ 
+ .ui.fluid.button {
+     display: block;
+ }

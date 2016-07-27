@@ -57,7 +57,7 @@
             </div>
             <div class="content-r">
                 <div class="info-area">
-                    <div class="ui header"><i class="icon user focus-color"></i>个人资料</div>
+                    <div class="ui header mian-font-color fz16b"><i class="icon user focus-color"></i>个人资料</div>
                     <div class="forms ui form">
                         <form action="" id="user-basic-info">
                             <dl class="required field">
@@ -65,7 +65,7 @@
                                     <label for="username">用户名：</label>
                                 </dt>
                                 <dd>
-                                    <input type="text" name="username" placeholder="1385642156" class="inputwidth">
+                                    <input type="text" name="username" placeholder="" class="inputwidth">
                                     <div class="ui left pointing basic red mini label none">请输入用户名。</div>
                                 </dd>
                             </dl>
@@ -74,7 +74,7 @@
                                     <label for="nickname">昵称：</label>
                                 </dt>
                                 <dd>
-                                    <input type="text" name="nickname" placeholder="Oliver" class="inputwidth">
+                                    <input type="text" name="nickname" placeholder="" class="inputwidth">
                                     <div class="ui left pointing basic red mini label none">该昵称已经存在。</div>
                                 </dd>
                             </dl>
@@ -119,7 +119,7 @@
                                 </dt>
                                 <dd>
                                     <div class="ui right icon small input">
-                                        <input type="text" placeholder="请选择.." name="birth" class="inputwidth calendar">
+                                        <input type="text" placeholder="请选择.." name="birth" class="inputwidth calendar" id="calendar">
                                         <i class="users icon"></i>
                                     </div>
                                     <div class="ui left pointing basic red mini label" style="display:none;">请选择生日。</div>
@@ -166,7 +166,7 @@
                                 </dd>
                             </dl>
                             <dl class="field centeraligend">
-                                <ul class="ui primary button mt15">提交</ul>
+                                <button class="ui primary button mt15">提交</button>
                             </dl>
                         </form>
                     </div>
@@ -221,7 +221,7 @@
                         </div>
                     </div>
                     <div class="actions">
-                        <button id="uploadImg" class="ui primary right labled icon button">保存修改<i class="icon checkmark"></i></button>
+                        <button id="uploadImg" class="ui basic green button">保存修改</button>
                     </div>
                     <form id="fileupload-form">
                         <input id="upload" style="display: none;" type="file" name="upload" />
@@ -271,7 +271,7 @@
     </ul>
     <div class="copy">
         <p>
-            <span class="c-box" ">
+            <span class="c-box">
 						<a href="javascript:; ">首页</a> | 
 						<a href="javascript:; ">招聘英才</a> | 
 						<a href="javascript:; ">合作及洽谈</a> | 
@@ -294,7 +294,7 @@
     <script src="../public/js/progress.min.js"></script>
     <script src="../public/js/modal.min.js"></script>
     <!--  Plugin flatpickr MultiLinkageSelect  -->
-    <script src="../public/js/plug/flatpickr.js"></script>
+    <script src="../public/js/plug/flatpickr-es5.js"></script>
     <script src="../public/js/plug/location.js"></script>
     <script src="../public/js/plug/LinkageSelect.js"></script>
     <!--  Plugin flatpickr MultiLinkageSelect  /-->
@@ -305,7 +305,7 @@
     <script>
     $(function() {
         $('.checkbox').checkbox();
-        flatpickr('.calendar');
+        flatpickr('#calendar');
         //选择地址 data来自于location
         var options = {
                 data: data

@@ -1,15 +1,50 @@
 /* home style */
 
+@import '../../public/sass/globle.scss';
 .icon.focus-color {
     color: #6e8e00 !important;
 }
 
+.main-color {
+    color: #6e8e00 !important;
+}
+
 .mian-font-color {
-    color: #45483d;
+    color: #45483d !important;
 }
 
 .sub-font-color {
-    color: #787d6a;
+    color: #787d6a !important;
+}
+
+.fz16b {
+    font-size: 1.142857142857143rem;
+    font-weight: bold;
+}
+
+.fzroot {
+    font-size: 1rem !important;
+    font-weight: normal !important;
+}
+
+.mt15 {
+    margin-top: 1.071428571428571em !important;
+}
+
+.pt15 {
+    padding-top: 1.071428571428571em !important;
+}
+
+.pt20 {
+    padding-top: 1.428571428571429em;
+}
+
+.pt30 {
+    padding-top: 2.142857142857143em;
+}
+
+.pb30 {
+    padding-bottom: 2.142857142857143em;
 }
 
 .uc-title {
@@ -202,10 +237,6 @@
     text-align: center;
 }
 
-.mt15 {
-    margin-top: 1.071428571428571em !important;
-}
-
 .forms .input .icon {
     z-index: 1;
 }
@@ -228,6 +259,7 @@
     overflow: auto;
     margin-top: 45px;
 }
+
 // .avator-modal .view-image img {
 //     display: block;
 // }
@@ -246,8 +278,8 @@
     padding-left: 10px;
 }
 
-.avator-modal .tac {
-    text-align: center;
+.tac {
+    text-align: center !important;
 }
 
 .avator-modal .preview-area {
@@ -301,4 +333,89 @@
 
 .avator-modal .view-image .inverted.dimmer {
     display: none;
+}
+
+.upload-id-pic .idpic {
+    float: left;
+    position: relative;
+    width: 230px;
+    height: 230px;
+    background-color: $page-bg-color;
+    margin-right: 62px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 3px;
+    box-shadow: 0 1px 4px #999;
+    overflow: hidden;
+}
+
+.upload-id-pic .idpic:hover span.button.green {
+    visibility: visible;
+}
+
+.idpic span.button.green {
+    visibility: hidden;
+}
+
+.upload-id-pic .idpic:last-child {
+    margin-right: 0;
+}
+
+.upload-id-pic .idpic img {
+    position: absolute;
+    width: 98%;
+    width: calc(100% - 6px);
+    bottom: 0;
+}
+
+.upload-id-pic .identify {
+    text-align: center;
+}
+
+.upload-id-pic .idpic span.button.green,
+.upload-id-pic .identify {
+    z-index: 1;
+}
+
+.defined-width {
+    width: 814px !important;
+}
+
+.poscenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+.special-dl-width {
+    width: 932px;
+}
+
+.conform-info {
+    width: 450px !important;
+    height: 230px !important;
+    margin-left: -225px !important;
+}
+
+.bankcard-box {
+    padding: 45px 20px;
+    background-color: #f2f6f8;
+}
+
+.card-item {
+    float: left;
+    width: 268px;
+    height: 158px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.card-item:nth-child(3n-1) {
+    margin-left: 20px;
+    margin-right: 20px;
 }
