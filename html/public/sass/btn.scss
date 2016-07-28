@@ -19,7 +19,7 @@
  /*******************************
             Button
 *******************************/
- 
+
  .ui.button {
      cursor: pointer;
      display: inline-block;
@@ -215,24 +215,24 @@
      box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
  }
  
- .ui.primary.buttons .button:hover,
- .ui.primary.button:hover {
-     background-color: darken($btn-primary-bg-color, 5%);
-     color: $btn-primary-color;
+   .ui.primary.buttons .button:hover,
+   .ui.primary.button:hover {
+     background-color: $btn-copy-color;
+     color: $btn-primary-hover-font-color;
      text-shadow: none;
- }
+   }
  
  .ui.primary.buttons .button:focus,
  .ui.primary.button:focus {
-     background-color: darken($btn-primary-bg-color, 5%);
-     color: $btn-primary-color;
+     background-color: $btn-copy-color;
+     color: $btn-primary-hover-font-color;
      text-shadow: none;
  }
  
  .ui.primary.buttons .button:active,
  .ui.primary.button:active {
-     background-color: darken($btn-primary-bg-color, 10%);
-     color: $btn-primary-color;
+     background-color: $btn-copy-color;
+     color: $btn-user-color;
      text-shadow: none;
  }
  
@@ -463,10 +463,10 @@
      color: $btn-user-color !important;
  }
  
- .ui.basic.green.button:hover {
-     background: 0 0!important;
-     box-shadow: 0 0 0 1px #d01919 inset!important;
-     color: #d01919!important;
+ .ui.basic.green.button:hover{
+    background: $btn-user-color !important;
+//  box-shadow: 0 0 0 1px $btn-user-color inset!important;
+    color: #fff!important;
  }
  
  .ui.basic.buttons {

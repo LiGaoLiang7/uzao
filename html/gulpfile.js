@@ -1,16 +1,22 @@
-var gulp      = require('gulp');
-var sass      = require('gulp-sass');
-var concat    = require('gulp-concat');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
-// var uglify    = require('gulp-uglify'); //最小化js
-// var imagemin  = require('gulp-imagemin');
-// var rename    = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var rename = require('gulp-rename');
+var connect = require('gulp-connect');
 
-gulp.task('uzao', function() {
+/*  .pipe(connect.reload());  */
 
-    console.log('hello');
+gulp.task('server', function() {
+    connect.server({
+        root: '../htmlL/',
+        livereload: true
+    });
 });
-gulp.task('default', ['uzao']); //创建默认任务
+
+
 
 gulp.task('copy-index', function() {
     return gulp.src('./home/index.html').pipe(gulp.dest('dist'));
@@ -51,30 +57,44 @@ gulp.task('sass', function() {
     return gulp.src('./public/sass/*.scss')
         .pipe(sass())
         .pipe(minifyCSS())
-        .pipe(gulp.dest('./public/css'));
+        .pipe(gulp.dest('./public/css'))
+        .pipe(connect.reload());
 });
 
 gulp.task('sass-home', function() {
     return gulp.src('./home/sass/*.scss')
         .pipe(sass())
         .pipe(minifyCSS())
-        .pipe(gulp.dest('./home/css'));
+        .pipe(gulp.dest('./home/css'))
+        .pipe(connect.reload());
 });
 
 // 合并js
 gulp.task('scripts', function() {
     return gulp.src('./public/js/*.min.js')
-    .pipe(concat('uzao.js'))
-    .pipe(gulp.dest('./dist/'))
-    .pipe(uglify())
-    .pipe(rename('uzao.min.js'))
-    .pipe(gulp.dest('./dist/'));
+        .pipe(concat('uzao.js'))
+        .pipe(gulp.dest('./dist/'))
+        .pipe(uglify())
+        .pipe(rename('uzao.min.js'))
+        .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('html-home', function() {
+    return gulp.src('./home/*.html')
+        .pipe(connect.reload());
+});
+
+gulp.task('html-front', function() {
+    return gulp.src('./front/*.html')
+        .pipe(connect.reload());
 });
 
 // watch
 gulp.task('watch', function() {
-    // gulp.watch('./home/index.html', ['copy-index']);
-    // gulp.watch('./home/images/*.*', ['copy-images']);
     gulp.watch('./public/sass/*.scss', ['sass']);
     gulp.watch('./home/sass/*.scss', ['sass-home']);
+    gulp.watch('./home/*.html', ['html-home']);
+
 });
+
+gulp.task('default', ['watch']); //创建默认任务
