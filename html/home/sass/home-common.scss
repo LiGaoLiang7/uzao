@@ -124,8 +124,9 @@
     margin: 50px 0;
     min-height: 400px;
 }
+
 //
-.uc-conbox .info-areas{
+.uc-conbox .info-areas {
     padding: 0 80px;
     margin: 50px 0;
     min-height: 702px;
@@ -195,8 +196,11 @@
     margin: 0;
     line-height: 3rem;
 }
+
 //
-.sure{line-height: 28px !important;}
+.sure {
+    line-height: 28px !important;
+}
 
 .forms dl>dt {
     width: 75px;
@@ -352,17 +356,9 @@
     margin-right: 62px;
     text-align: center;
     border-radius: 4px;
-    padding: 3px;
-    box-shadow: 0 1px 4px #999;
+    box-shadow: 0 0 1px #999;
     overflow: hidden;
-}
-
-.upload-id-pic .idpic:hover span.button.green {
-    visibility: visible;
-}
-
-.idpic span.button.green {
-    visibility: hidden;
+    text-align: center;
 }
 
 .upload-id-pic .idpic:last-child {
@@ -371,13 +367,43 @@
 
 .upload-id-pic .idpic img {
     position: absolute;
-    width: 98%;
-    width: calc(100% - 6px);
-    bottom: 0;
+    max-width: 98%;
+    max-width: calc(100% - 6px);
+    bottom: 3px;
+    max-height: 189px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
 }
 
 .upload-id-pic .identify {
     text-align: center;
+    font-weight: bold !important;
+    line-height: 2.428571428571429rem;
+    box-shadow: 0 1px 0 #e8e8e8;
+}
+
+.upload-id-pic .modified-btn .icon {
+    color: #fff;
+    pointer-events: none;
+}
+
+.upload-id-pic .modified-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: -16px;
+    right: -16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(69, 72, 61, .5);
+    cursor: pointer;
+    transition: background-color .4s ease 0s;
+    -webkit-transition: background-color .4s ease 0s;
+}
+
+.upload-id-pic .modified-btn:hover {
+    background-color: rgba(69, 72, 61, .8);
 }
 
 .upload-id-pic .idpic span.button.green,
@@ -389,12 +415,25 @@
     width: 814px !important;
 }
 
+.ui.icon.addedicon {
+    font-size: 6.857142857142857rem;
+    cursor: pointer;
+    color: rgba(204, 204, 204, .5);
+    transition: color .4s ease 0s;
+    -webkit-transition: color .4s ease 0s;
+}
+
+.ui.icon.addedicon:hover,
+.ui.icon.addedicon:focus {
+    color: rgba(204, 204, 204, .8);
+}
+
 .poscenter {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-20%);
+    -webkit-transform: translateX(-50%) translateY(-20%);
 }
 
 .special-dl-width {
@@ -427,31 +466,80 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
 /**************************shipping address in content-r bg********************************/
-.shipping-add dt,.shipping-add dd{
-    float: none !important;line-height:2rem !important ;
+
+.shipping-add dt,
+.shipping-add dd {
+    float: none !important;
+    line-height: 2rem !important;
 }
-.shipping-add dd{width:725px !important;margin-bottom: 1rem !important;}
-.consignee>em{
-    font-style: normal;color: #45483d;margin-right: 20px;
+
+.shipping-add dd {
+    width: 725px !important;
+    margin-bottom: 1rem !important;
 }
-.consignee .def-add{color: #45483d;font-size: 0.85714286em;background-color: #ccc;}
-.message>label,.shipping-add .more{font-weight: bold;}
-.shipping-add .more>i{position: relative;display: inline-block;width: 10px;height: 7px;overflow: hidden;margin-left: 5px;}
+
+.consignee>em {
+    font-style: normal;
+    color: #45483d;
+    margin-right: 20px;
+}
+
+.consignee .def-add {
+    color: #45483d;
+    font-size: 0.85714286em;
+    background-color: #ccc;
+}
+
+.message>label,
+.shipping-add .more {
+    font-weight: bold;
+}
+
+.shipping-add .more>i {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 7px;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
 .ul-actives:after {
     position: absolute;
     left: 4px;
     top: -1px;
     content: " ";
     font-size: 0;
-    border: 4px solid #bae71e; 
+    border: 4px solid #bae71e;
     transform: rotate(45deg) translateX(-50%)
 }
-.shipping-add .size{font-size: 0.85714286em;color: #fff;background-color: #6e8e00;}
+
+.shipping-add .size {
+    font-size: 0.85714286em;
+    color: #fff;
+    background-color: #6e8e00;
+}
+
+
 /**************************shipping address in content-r end********************************/
 
+
 /**************************newAdd in content-r bg********************************/
-.new-add label{position: relative;}
-.new-add i{position: absolute;left: -6px;color: red;font-style: normal;}
+
+.new-add label {
+    position: relative;
+}
+
+.new-add i {
+    position: absolute;
+    left: -6px;
+    color: red;
+    font-style: normal;
+}
+
 //.new-add .contact dl{float: left !important;}
+
 /**************************newAdd in content-r end********************************/

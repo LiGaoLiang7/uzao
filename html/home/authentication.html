@@ -95,22 +95,25 @@
                                             <div class="ui active inverted dimmer none upload-loader">
                                                 <div class="ui text loader sub-font-color fzroot">正在上传..</div>
                                             </div>
-                                            <p class="identify mt15">身份证正面照</p>
-                                            <span class="ui button basic green mini poscenter" data-index="1">上传</span>
+                                            <p class="identify">身份证正面照</p>
+                                            <i class="ui icon user poscenter addedicon" data-index="1"></i>
+                                            <div class="modified-btn none" data-index="1" title="重新上传"><i class="icon ui user"></i></div>
                                         </div>
                                         <div class="idpic">
                                             <div class="ui active inverted dimmer none upload-loader">
                                                 <div class="ui text loader sub-font-color fzroot">正在上传..</div>
                                             </div>
-                                            <p class="identify mt15">身份证背面照</p>
-                                            <span class="ui button basic green mini poscenter" data-index="2">上传</span>
+                                            <p class="identify">身份证背面照</p>
+                                            <i class="ui icon user poscenter addedicon" data-index="2"></i>
+                                            <div class="modified-btn none" data-index="2" title="重新上传"><i class="icon ui user"></i></div>
                                         </div>
                                         <div class="idpic">
                                             <div class="ui active inverted dimmer none upload-loader">
                                                 <div class="ui text loader sub-font-color fzroot">正在上传..</div>
                                             </div>
-                                            <p class="identify mt15">本人持证照片</p>
-                                            <span class="ui button basic green mini poscenter" data-index="3">上传</span>
+                                            <p class="identify">本人持证照片</p>
+                                            <i class="ui icon user poscenter addedicon" data-index="3"></i>
+                                            <div class="modified-btn none" data-index="3" title="重新上传"><i class="icon ui user"></i></div>
                                         </div>
                                     </div>
                                 </dd>
@@ -189,11 +192,11 @@
         <div class="copy">
             <p>
                 <span class="c-box">
-                        <a href="javascript:; ">首页</a> | 
-                        <a href="javascript:; ">招聘英才</a> | 
-                        <a href="javascript:; ">合作及洽谈</a> | 
-                        <a href="javascript:; ">联系我们</a> |  
-                        <a  href="javascript:; ">关于我们</a>
+                        <a href="javascript:;">首页</a> | 
+                        <a href="javascript:;">招聘英才</a> | 
+                        <a href="javascript:;">合作及洽谈</a> | 
+                        <a href="javascript:;">联系我们</a> |  
+                        <a  href="javascript:;">关于我们</a>
                     </span>
                 <br /> Copyright © 2007-2016 miaowu Inc.,All Rights Reserved.
                 <br /> 陕ICP备14005701号
@@ -238,9 +241,10 @@
                 },
                 success: function(data) {
                     $node.children('img').remove();
-                    $node.children('span').text('修改');
+                    $node.children('i').addClass('none');
                     $node.append("<img src=" + data.path + ">");
                     $node.children('.upload-loader').addClass('none');
+                    $node.children('.modified-btn').removeClass('none');
                 },
                 error: function(data) {
                     alert(data.responseText);

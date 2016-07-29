@@ -86,54 +86,87 @@
                     </li>
                 </ul>
             </div>
-            <div class="content-r">
-                <div class="info-areas">
-                    <div class="ui header mian-font-color fz16b "><i class="icon user focus-color"></i>收货地址</div>
-                    <div class="forms">
-                        <form class="shipping-add">
-                            <dl>
-                                <dt class="message">
-                                    <label for="email">收货人信息</label>
-                                </dt>
-                                <dd>
-                                    <span class="consignee">
-	                                    	<em class="name">王晓明</em>
-	                                    	<em class="address"> 陕西省 西安市 莲湖区 北广济街271号</em>
-	                                    	<em class="area-code">710021</em>
-	                                    	<em class="tel">029-85462345</em>
-	                                    	<em class="mobile-no">152****9847</em>
-	                                		<a href="javascript:;" class="ui button def-add">默认地址</a>
-	                                    </span>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt class="more">
-                                    更多地址<i class="ul-actives"></i>
-                                </dt>
-                                <dd class="sure">
-                                    <button class="ui button size">新增收货人地址</button>
-                                </dd>
-                            </dl>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="u-footer">
-        <ul class="u-footerlist cf">
-            <li>
-                <span class="f-nav">帮助中心</span>
-                <a href="javascript:;">常见问题解答</a>
-            </li>
-            <li>
-                <span class="f-nav">合作及洽谈</span>
-                <a href="javascript:;">设计师招商</a>
-                <a href="javascript:;">大宗采购</a>
-                <a href="javascript:;">商务合作</a>
-                <a href="javascript:;">商家入驻</a>
-            </li>
-            <li>
+				<div class="content-r">
+					<div class="info-areas">
+						<div class="ui header mian-font-color fz16b"><i class="icon user focus-color"></i>收货地址</div>
+						<div class="forms shipping-add">
+                            <span class="message">收货人信息</span>
+                            <p class="consignee">
+                            	<em class="name">王晓明</em>
+                            	<em class="address"> 陕西省 西安市 莲湖区 北广济街271号</em>
+                            	<em class="area-code">710021</em>
+                            	<em class="tel">029-85462345</em>
+                            	<em class="mobile-no">152****9847</em>
+                        		<a href="javascript:;" class="ui button def-add">默认地址</a>
+                            </p>
+							<span class="more" id="more">
+								更多地址<i class="ul-actives"></i>
+                      		</span>
+							<p class="sure">
+								 <table class="ui table selectable" id="add">
+			                        <!-- striped selectable -->
+			                        <thead class="tac">
+			                            <tr>
+			                                <th class="sub-font-color">收货人</th>
+			                                <th class="sub-font-color">所在地区</th>
+			                                <th class="sub-font-color">详细地址</th>
+			                                <th class="sub-font-color">邮编</th>
+			                                <th class="sub-font-color">固话</th>
+			                                <th class="sub-font-color">手机</th>
+			                                <th class="sub-font-color">操作</th>
+			                            </tr>
+			                        </thead>
+			                        <tbody class="tac mian-font-color">
+			                            <tr>
+			                                <td>王晓明</td>
+			                                <td>陕西省 西安市 碑林区 互助路</td>
+			                                <td>北广济街271号</td>
+			                                <td>710021</td>
+			                                <td>029-85462345</td>
+			                                <td>152****9847</td>
+			                                <td class="consignee"><a href="javascript:;" class="ui button def-add">默认地址</a></td>
+			                            </tr>
+			                            <tr>
+			                                <td>王晓明</td>
+			                                <td>陕西省 西安市 碑林区 互助路</td>
+			                                <td>北广济街271号</td>
+			                                <td>710021</td>
+			                                <td>029-85462345</td>
+			                                <td>152****9847</td>
+			                                <td class="consignee"><a href="javascript:;" class="ui button def-add">设为默认</a></td>
+			                            </tr>
+			                            <tr>
+			                                <td>王晓明</td>
+			                                <td>陕西省 西安市 碑林区 互助路</td>
+			                                <td>北广济街271号</td>
+			                                <td>710021</td>
+			                                <td>029-85462345</td>
+			                                <td>152****9847</td>
+			                                <td class="consignee"></td>
+			                            </tr>
+			                        </tbody>
+			                    </table>
+								<button  class="ui button size">新增收货人地址</button>										
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="u-footer">
+			<ul class="u-footerlist cf">
+				<li>
+					<span class="f-nav">帮助中心</span>
+					<a href="javascript:;">常见问题解答</a>
+				</li>
+				<li>
+					<span class="f-nav">合作及洽谈</span>
+					<a href="javascript:;">设计师招商</a>
+					<a href="javascript:;">大宗采购</a>
+					<a href="javascript:;">商务合作</a>
+					<a href="javascript:;">商家入驻</a>
+				</li>
+				<li>
                 <span class="f-nav">支付方式</span>
                 <a href="javascript:;">3D钱包</a>
                 <a href="javascript:;">银行卡及支付平台</a>
@@ -177,5 +210,11 @@
 
     <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js "></script>
 </body>
-
+	<script>
+		$(function(){
+			$("#more").click(function(){
+				$("#add").slideToggle();
+			})
+		})
+	</script>
 </html>
