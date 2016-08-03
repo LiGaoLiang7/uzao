@@ -85,65 +85,69 @@
                         <a href="javascript:void(0)">我的积分</a>
                     </li>
                 </ul>
-            </div>
-            <div class="content-r">
-                <div class="info-area">
-                    <div class="ui header mian-font-color fz16b "><i class="icon user focus-color"></i>新增收货地址</div>
-                    <div class="forms ui form">
-                        <form action="" id="user-basic-info" class="new-add">
+				</div>
+				<div class="content-r">
+					<div class="info-areas">
+						<div class="ui header mian-font-color fz16b"><i class="icon user focus-color "></i>新增收货地址</div>
+						<div class="forms ui form">
+							<form action="" id="user-basic-info" class="new-add">
                             <dl class="field">
                                 <dt>
-                                    <label for="username"><i>*</i>收货人：</label>
+                                    <label for="username"><i class="xing">*</i>收货人：</label>
                                 </dt>
                                 <dd>
                                     <input type="text" name="username" placeholder="1385642156" class="inputwidth">
                                     <div class="ui left pointing basic red mini label none">请输入用户名。</div>
                                 </dd>
                             </dl>
-                            <dl class="field">
+                            <dl class="field ui attached segment">
                                 <dt>
-                                    <label for="location"><i>*</i>所在城市：</label>
+                                    <label for="location"><i class="xing">*</i>所在城市：</label>
                                 </dt>
                                 <dd id="location_select">
-                                    <select class="level_1 multiSelect ui maxheight dropdown inputwidth"></select>
+                                    <select class="level_1 multiSelect ui maxheight dropdown"></select>
+								    <select class="level_2 multiSelect ui maxheight dropdown"></select>
+								    <select class="level_3 multiSelect ui maxheight dropdown"></select>
                                     <div class="ui left pointing basic red mini label none">请选择所在城市</div>
-                                </dd>
+                               </dd>
                             </dl>
                             <dl class="field">
                                 <dt>
-                                    <label for="username"><i>*</i>详细地址：</label>
+                                    <label for="username"><i class="xing">*</i>详细地址：</label>
                                 </dt>
                                 <dd>
                                     <input type="text" name="username" placeholder="" class="">
                                     <div class="ui left pointing basic red mini label none">请输入用户名。</div>
                                 </dd>
                             </dl>
-                            <!--<div class="contact">-->
-                            <dl class="field">
-                                <dt>
-                                    <label for="username">手机号码：</label>
-                                </dt>
-                                <dd>
-                                    <input type="text" name="username" placeholder="" class="inputwidth">
-                                    <div class="ui left pointing basic red mini label none">请输入用户名。</div>
-                                </dd>
-                            </dl>
-                            <dl class="field">
-                                <dt>
-                                    <label for="username">固定电话：</label>
-                                </dt>
-                                <dd>
-                                    <input type="text" name="username" placeholder="" class="inputwidth">
-                                    <div class="ui left pointing basic red mini label none">请输入用户名。</div>
-                                </dd>
-                            </dl>
-                            <!--</div>-->
+                            <div class="contact field">
+                            	<dl class="field">
+	                                <dt>
+	                                    <label for="username">手机号码：</label>
+	                                </dt>
+	                                <dd>
+	                                    <input type="text" name="username" placeholder="" class="inputwidth">
+	                                    <div class="ui left pointing basic red mini label none">请输入用户名。</div>
+	                                </dd>
+	                            </dl>
+	                            <dl class="field telephone">
+	                                <dt>
+	                                    <label for="username">固定电话：</label> 
+	                                </dt>
+	                                <dd>
+	                                    <input type="text" name="username" placeholder="" class="inputwidth">
+	                                    <div class="ui left pointing basic red mini label none">请输入用户名。</div>
+	                                </dd>
+	                            </dl>
+	                            <span class="tip">手机号码和固定号码必须填写一项，便于联系您</span>
+                            </div>
                             <dl class="field">
                                 <dt>
                                     <label for="email" class="middle-content">邮箱：</label>
                                 </dt>
                                 <dd>
-                                    <input type="text" name="email" placeholder="" class="inputwidth">
+                                	<input type="text" name="email" placeholder="" class="inputwidth mag-right">
+                                	<span class="tip">用于接受订单提醒邮件，便于您及时了解订单状态</span>
                                 </dd>
                             </dl>
                             <dl class="field">
@@ -151,22 +155,27 @@
                                     <label for="email" class="middle-content">地址别名：</label>
                                 </dt>
                                 <dd>
-                                    <input type="text" name="username" placeholder="">
+                                	<input type="text" name="username" placeholder="">
                                     <div class="ui left pointing basic red mini label none">请输入用户名。</div>
                                 </dd>
                             </dl>
+                            <dl class="inline fields comname">
+						 		<dt>
+						 			<label for="familyname">常用名称：</label>
+						 		</dt>							    
+							    <dd>
+							      	<input type="text" placeholder="" class="family">
+							    	<input type="text" placeholder="" class="name1">
+							    	<input type="text" placeholder="" class="name1">
+						    	</dd>
+							</dl>   
                             <dl class="field">
-                                <dt>
-                                    <label for="email" class="middle-content">常用名称：</label>
-                                </dt>
-                                <dd>
-                                    <input type="text" name="username" placeholder="1385642156" class="inputwidth">
-                                    <div class="ui left pointing basic red mini label none">请输入用户名。</div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <button class="ui basic button green mini  mt15 upload-avator">设为默认地址</button>
-                            </dl>
+                            	<dt>&nbsp;</dt>
+							    <dd class="ui checkbox">
+							      <input type="checkbox" tabindex="0" class="hidden">
+							      <label class="labborder">设为默认地址</label>
+							    </dd>
+							</dl>                          	
                             <dl class="field centeraligend">
                                 <ul class="ui primary button mt15">保存</ul>
                             </dl>
@@ -228,10 +237,35 @@
 					Copyright © 2007-2016 miaowu Inc.,All Rights Reserved.<br />
 					陕ICP备14005701号
 				</p>
-		</div>
-    </div>
-
-    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js "></script>
+			</div>
+    	</div>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <!--<script src="../public/js/api.min.js"></script>-->
+    <script src="../public/js/transition.min.js"></script>
+    <script src="../public/js/dropdown.min.js"></script>
+    <script src="../public/js/plug/location.js"></script>
+	<script src="../public/js/checkbox.min.js"></script>
+	<script src="../public/js/plug/LinkageSelect.js"></script>
 </body>
-
+	<script>
+	    $(function() {
+	        $('.ui .checkbox').checkbox();
+	        
+	        var options = {
+		      data: data
+		    }
+		    var sel = new LinkageSelect(options);
+		    sel.bind('#location_select .level_1');
+		    sel.bind('#location_select .level_2');
+		    sel.bind('#location_select .level_3');
+		    $('#location_select select').change(function(event) {
+		      $('#location_select select').dropdown();
+		      if ($(this).parent('.multiSelect').next('.multiSelect').length > 0) {
+		        $(this).parent('.multiSelect').next().children('.text').text("清选择");
+		        $(this).parent('.multiSelect').next().next().children('.text').text("清选择");
+		      }
+		    });
+		    $('#location_select select').dropdown();
+	    });
+	</script>
 </html>

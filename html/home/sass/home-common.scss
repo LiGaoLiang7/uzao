@@ -470,15 +470,14 @@
 
 /**************************shipping address in content-r bg********************************/
 
-.shipping-add dt,
-.shipping-add dd {
-    float: none !important;
-    line-height: 2rem !important;
+.shipping-add span,
+.shipping-add p {
+    line-height: 2rem;
+    color: #787d6a;
 }
 
-.shipping-add dd {
-    width: 725px !important;
-    margin-bottom: 1rem !important;
+.shipping-add p {
+    margin-bottom: 1rem;
 }
 
 .consignee>em {
@@ -493,9 +492,13 @@
     background-color: #ccc;
 }
 
-.message>label,
-.shipping-add .more {
+.message,
+.more {
     font-weight: bold;
+}
+
+.more {
+    cursor: pointer;
 }
 
 .shipping-add .more>i {
@@ -521,6 +524,11 @@
     font-size: 0.85714286em;
     color: #fff;
     background-color: #6e8e00;
+    margin-top: 19px;
+}
+
+#add {
+    display: none;
 }
 
 
@@ -533,7 +541,7 @@
     position: relative;
 }
 
-.new-add i {
+i.xing {
     position: absolute;
     left: -6px;
     color: red;

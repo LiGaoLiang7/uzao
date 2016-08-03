@@ -3,12 +3,15 @@
 @import 'globle.scss';
 .u-head {
     width: 100%;
+    line-height: 70px;
+    text-align: center;
+    font-size: 16px;
     background-color: #fff
 }
 
 .u-content {
     background-color: #f2f6f8;
-    padding-top: 20px
+    padding: 1.42857143em 0 2.85714286em ;
 }
 
 .u-footer {
@@ -22,10 +25,53 @@
 }
 
 .u-head>div {
-    height: 58px;
-    background: darkcyan
+    height: 70px;
+}
+.u-head a{color: #45483d;}
+
+.u-head .h-logo{
+    width: 150px;
+    height: 70px;
+    background: #bae71e;
+    opacity: .5;
 }
 
+.u-head .h-logo,.u-head .h-nav,.u-head .h-search{
+    float: left;
+}
+.u-head .h-login{
+    float: right;
+}
+.u-head .h-nav li{
+    float: left;
+}
+.u-head .u-home{margin-left: 15px;}
+.u-head .h-login a{margin: 0 7px;}
+.u-head .h-nav a{
+    height: 70px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: block;    
+}
+.u-head .h-nav a:hover{
+    background:#fafcf8 ;
+    border-bottom:2px solid $btn-submit-bg-color ;
+}
+.h-navhover{
+    background:#fafcf8 ;
+    border-bottom:2px solid $btn-submit-bg-color ;
+}
+.h-search{position: relative;height: 70px;margin-left: 15px;}
+.border-bm{
+    width:0;
+    padding:  0.678614em 0 !important;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+.ui.input > i.icons{position: absolute;left: 0;bottom: 38px;} 
 .list-color {
     background-color: #fff;
     position: relative;
