@@ -6,7 +6,8 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');
-
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
 /*  .pipe(connect.reload());  */
 
 gulp.task('server', function() {
@@ -16,7 +17,12 @@ gulp.task('server', function() {
     });
 });
 
-
+gulp.task('browser-sync', function(){
+    browserSync.init({
+        proxy:'localhost',
+        files:['./**/*.css','./**/*.html']
+    });
+});
 
 gulp.task('copy-index', function() {
     return gulp.src('./home/index.html').pipe(gulp.dest('dist'));
@@ -58,7 +64,7 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(minifyCSS())
         .pipe(gulp.dest('./public/css'))
-        .pipe(connect.reload());
+        .pipe(reload({stream: true}));
 });
 
 gulp.task('sass-home', function() {
@@ -66,7 +72,8 @@ gulp.task('sass-home', function() {
         .pipe(sass())
         .pipe(minifyCSS())
         .pipe(gulp.dest('./home/css'))
-        .pipe(connect.reload());
+        .pipe(reload({stream: true}));
+        // .pipe(connect.reload());
 });
 
 // 合并js
@@ -94,7 +101,6 @@ gulp.task('watch', function() {
     gulp.watch('./public/sass/*.scss', ['sass']);
     gulp.watch('./home/sass/*.scss', ['sass-home']);
     gulp.watch('./home/*.html', ['html-home']);
-
 });
 
-gulp.task('default', ['watch']); //创建默认任务
+gulp.task('default', ['watch', 'browser-sync']);
