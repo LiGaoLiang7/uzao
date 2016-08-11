@@ -19,7 +19,7 @@
 
 .fz16b {
     font-size: 1.142857142857143rem;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .fzroot {
@@ -361,6 +361,10 @@
     text-align: center;
 }
 
+.idpic span.button.green {
+    visibility: hidden;
+}
+
 .upload-id-pic .idpic:last-child {
     margin-right: 0;
 }
@@ -486,7 +490,8 @@
     margin-right: 20px;
 }
 
-.consignee .def-add {
+.consignee .def-add,
+.consignee .set-default {
     color: #45483d;
     font-size: 0.85714286em;
     background-color: #ccc;
@@ -524,11 +529,19 @@
     font-size: 0.85714286em;
     color: #fff;
     background-color: #6e8e00;
-    margin-top: 19px;
 }
 
 #add {
     display: none;
+    margin-bottom: 19px;
+}
+
+.f-right {
+    float: right;
+}
+
+.ui.table .consignee {
+    text-align: left;
 }
 
 
@@ -541,13 +554,323 @@
     position: relative;
 }
 
-i.xing {
+.new-add .xing {
     position: absolute;
     left: -6px;
     color: red;
     font-style: normal;
 }
 
-//.new-add .contact dl{float: left !important;}
+.new-add .contact {
+    width: 670px !important;
+    position: relative;
+}
+
+.contact .tip {
+    margin: 0em 0em 0 6.15em;
+}
+
+.mag-right {
+    margin-right: .5em !important;
+}
+
+.field .tip {
+    display: inline-block;
+    clear: both;
+    color: #787d6a;
+    font-size: 12px;
+}
+
+.new-add .telephone {
+    position: absolute;
+    top: 0;
+    right: -395px;
+}
+
+.new-add .checkbox label {
+    color: $btn-user-color;
+}
+
+.new-add .checkbox label:before {
+    border-color: $btn-user-color;
+}
+
+.new-add .checkbox label:hover {
+    border-color: $btn-user-color !important;
+}
+
+.new-add .checkbox>label:hover {
+    color: $btn-user-color;
+}
+
+.comname>dd>input {
+    margin-right: 12px !important;
+}
+
+.comname .family {
+    width: 103px !important;
+}
+
+.comname .name1,
+.comname .name2 {
+    width: 65px !important;
+}
+
+.location-select div {
+    width: 195px;
+}
+
+.centeraligend dd {
+    text-align: center !important;
+}
+
+.ui.checkbox input:focus ~ label {
+    color: #6E8E00 !important;
+}
+
+.ui.checkbox input:focus ~ label:before {
+    background: #ffffff;
+    border-color: #6e8e00 !important;
+}
+
+.mian-font-color tr:hover {
+    background-color: #f2f6f8 !important;
+}
+
 
 /**************************newAdd in content-r end********************************/
+
+
+/**************************login bg********************************/
+
+//1
+body {
+    position: relative;
+}
+
+.banner {
+    height: 463px;
+    background: url(../images/banner-1.jpg) no-repeat;
+}
+
+.loginbox {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-600px);
+    z-index: 10;
+    height: 463px;
+}
+
+.loginbox>div {
+    position: absolute;
+    right: 90px;
+    width: 360px;
+    height: 463px;
+    background: #fff;
+}
+
+.loginbox .login {
+    width: 250px;
+    height: 380px;
+    margin: 21px 55px 0 55px;
+}
+
+.loginbox .login .cf {
+    line-height: 18px;
+    margin-bottom: 55px;
+}
+
+.loginbox .login .cf>i {
+    display: block;
+    width: 97px;
+    height: 1px;
+    background: #ccc;
+    margin-top: 9px;
+}
+
+.login .cf>span {
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #787d6a;
+}
+
+.login .cf>i,
+.login .cf>span {
+    float: left;
+}
+
+.loginbox a {
+    color: #787d6a;
+}
+
+.login .l-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.l-title a {
+    padding: 5px 0;
+    margin: 0 20px;
+}
+
+.l-title .title-color {
+    color: #45483d;
+    border-bottom: 2px solid #bae71e;
+}
+
+.l-input input {
+    width: 250px;
+    padding-left: 20px !important;
+}
+
+.input-color {
+    border-bottom: 1px solid #bae71e;
+}
+
+.l-input>form>div {
+    position: relative;
+}
+
+.l-input .icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+}
+
+.l-input .username {
+    margin-bottom: 22px;
+}
+
+.l-input .tip {
+    font-size: 12px;
+    color: #de5c0f;
+    padding: 10px 0 0 2px;
+    display: none;
+}
+
+.help {
+    padding: 20px 0 20px 0;
+}
+
+.help .checkbox>.labcolor {
+    color: #787d6a;
+}
+
+.help>a {
+    margin-left: 54px;
+}
+
+.l-input .help .checkbox label:before {
+    border-color: #6e8e00;
+}
+
+.log>button {
+    width: 250px;
+    height: 35px;
+}
+
+.register {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.register .reg {
+    color: #6e8e00;
+}
+
+//2
+//input{color: rgba(0,0,0,0.55) !important;}
+input[placeholder] {
+    color: #45483d;
+}
+
+.l-input .passwoed {
+    position: relative;
+}
+
+.captcha {
+    position: absolute;
+    font-style: normal;
+    bottom: 10px;
+    right: 3px;
+    color: #ccc;
+}
+
+.captcha>a {
+    color: #ccc;
+}
+
+.captcha>.naw-captcha {
+    color: #6e8e00;
+}
+
+
+/**************************login end********************************/
+
+
+/**************************message bg********************************/
+
+.m-message th,
+.m-message td {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+.m-message{
+    margin-bottom: 1rem !important;
+}
+
+.m-message td:last-of-type,
+.m-message th:last-of-type {
+    text-align: right !important;
+}
+
+.m-read {
+    float: right;
+}
+.m-message .message{
+    text-indent: 2rem;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.6rem;
+}
+.addshadow{
+    box-shadow: 0 0 10px #c7c7c7;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.tal{
+    text-align: left;
+}
+.tar{
+    text-align: right;
+}
+.tac{
+    text-align: center;
+}
+
+
+/**************************message end********************************/
+
+/**************************evaluation********************************/
+.rating-deatils{
+    text-align: left;
+    padding-top: 10px;
+}
+.rating-deatils span{
+    color: #e0661d;
+    margin-right: 18px;
+}
+.rating-deatils span b{
+    font-weight: normal;
+}
+.comment-content{
+    width: 592px;
+}
+/**************************evaluation********************************/

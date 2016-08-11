@@ -73,7 +73,6 @@ gulp.task('sass-home', function() {
         .pipe(minifyCSS())
         .pipe(gulp.dest('./home/css'))
         .pipe(reload({stream: true}));
-        // .pipe(connect.reload());
 });
 
 // 合并js
