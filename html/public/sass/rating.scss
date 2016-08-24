@@ -78,15 +78,15 @@
  
  .ui.star.rating .active.icon {
      background: transparent !important;
-     color: #ffe623 !important;
-     text-shadow: 0px -1px 0px #ddc507, -1px 0px 0px #ddc507, 0px 1px 0px #ddc507, 1px 0px 0px #ddc507 !important;
+     color: #de5c0f !important; /* original ffe623 */
+     text-shadow: 0px -1px 0px #e6a200, -1px 0px 0px #e6a200, 0px 1px 0px #e6a200, 1px 0px 0px #e6a200 !important;  /* ddc507 */
  }
  /* Selected Star */
  
  .ui.star.rating .icon.selected,
  .ui.star.rating .icon.selected.active {
      background: transparent !important;
-     color: #ffcc00 !important;
+     color: #de5c0f !important; /* ffcc00 */
      text-shadow: 0px -1px 0px #e6a200, -1px 0px 0px #e6a200, 0px 1px 0px #e6a200, 1px 0px 0px #e6a200 !important;
  }
  /*-------------------

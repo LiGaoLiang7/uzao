@@ -17,9 +17,34 @@
     color: #787d6a !important;
 }
 
+.waring-icon-color,
+.emphasize-color {
+    color: #de5c0f !important;
+}
+
 .fz16b {
     font-size: 1.142857142857143rem;
     font-weight: bold;
+}
+
+.fz18 {
+    font-size: 1.285714285714286rem;
+}
+
+.fz12 {
+    font-size: 0.8571428571428571rem;
+}
+
+.fwn {
+    font-weight: normal;
+}
+
+.fsn {
+    font-style: normal;
+}
+
+.dib {
+    display: inline-block;
 }
 
 .fzroot {
@@ -45,6 +70,20 @@
 
 .pb30 {
     padding-bottom: 2.142857142857143em;
+}
+
+.must {
+    position: relative;
+    padding-left: 6px;
+}
+
+.must::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #de5c0f;
+    top: 2px;
 }
 
 .uc-title {
@@ -818,7 +857,8 @@ input[placeholder] {
     padding-left: 30px !important;
     padding-right: 30px !important;
 }
-.m-message{
+
+.m-message {
     margin-bottom: 1rem !important;
 }
 
@@ -830,47 +870,164 @@ input[placeholder] {
 .m-read {
     float: right;
 }
-.m-message .message{
+
+.m-message .message {
     text-indent: 2rem;
     text-align: left;
     font-weight: normal;
     line-height: 1.6rem;
 }
-.addshadow{
+
+.addshadow {
     box-shadow: 0 0 10px #c7c7c7;
 }
-.fl{
+
+.fl {
     float: left;
 }
-.fr{
+
+.fr {
     float: right;
 }
-.tal{
+
+.tal {
     text-align: left;
 }
-.tar{
+
+.tar {
     text-align: right;
 }
-.tac{
+
+.tac {
     text-align: center;
 }
 
 
 /**************************message end********************************/
 
+
 /**************************evaluation********************************/
-.rating-deatils{
+
+.rating-deatils {
     text-align: left;
     padding-top: 10px;
 }
-.rating-deatils span{
+
+.rating-deatils span {
     color: #e0661d;
     margin-right: 18px;
 }
-.rating-deatils span b{
+
+.rating-deatils span b {
     font-weight: normal;
 }
-.comment-content{
+
+.comment-content {
     width: 592px;
 }
+
+
 /**************************evaluation********************************/
+
+
+/************************** safetyCertification ********************/
+
+.certificate {
+    margin-top: 31px;
+}
+
+.cert-item {
+    line-height: 75px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    margin-top: -1px;
+}
+
+.cert-item dd {
+    float: left;
+    margin-left: 0;
+    color: #45483d;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 60px;
+    text-indent: 0px;
+}
+
+.cert-item dt {
+    float: left;
+    color: #45483d;
+    width: 747px;
+    position: relative;
+}
+
+.cert-item .ui.icon.fz18 {
+    margin-right: 8px;
+}
+
+.cert-item .operation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    right: 0;
+}
+
+
+/************************** safetyCertification ********************/
+
+
+/************************** home-writeComments ********************/
+
+.write-comment .order-time {
+    margin: 0 14px;
+}
+
+.write-comment tr:hover {
+    background-color: #FFF !important;
+}
+
+.comment-item textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 1em;
+    border-color: #cccccc;
+    border-radius: 3px;
+    margin-top: 14px
+}
+
+.comment-item .rating-item {
+    margin-top: 14px;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    width: 266px;
+}
+
+.rating>i {
+    position: relative;
+}
+
+.rating>i .face {
+    position: absolute;
+    top: -22px;
+    width: 26px;
+    height: 24px;
+    font-size: 26px;
+    color: #de5c0f;
+    opacity: 0;
+    left: 88%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    text-shadow: none;
+    transition: opacity .3s ease 0s; 
+    -webkit-transition: opacity .3s ease 0s; 
+}
+
+.rating>i:hover .face,.rating>i:focus .face {
+    opacity: 1;
+}
+
+
+/************************** home-writeComments ********************/
