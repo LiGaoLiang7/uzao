@@ -6,7 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="../public/css/public.css" />
     <link rel="stylesheet" href="../public/css/uz-common.css" />
-    <link rel="stylesheet" href="../home/css/home-common.css" />
+    <link rel="stylesheet" href="../front/css/front-common.css" />
 </head>
 
 <body>
@@ -31,13 +31,17 @@
             </div>
         </div>
     </div>
-    <div class="u-content">
-        <div class="banner"></div>
-        <div class="min-width loginbox">
+    <div class="u-content login-min-height">
+        <div class="min-width loginbox cf">
             <div>
                 <div class="login">
                     <p class="cf"><i></i><span>登录</span><i></i></p>
-                    <p class="l-title"><a href="javascript:;" class="title-color">账号密码登录</a><a href="login-2.html">手机动态登录</a></p>
+                    <p class="l-title">
+                        <label for="userpwd" class="active">账号密码登录</label>
+                        <label for="mobile">手机动态登录</label>
+                    </p>
+                    <input type="radio" name="tabs" id="userpwd" class="tab" hidden checked>
+                    <input type="radio" name="tabs" id="mobile" class="tab" hidden>
                     <div class="l-input">
                         <form>
                             <div class="username">
@@ -64,8 +68,37 @@
                             </div>
                         </form>
                     </div>
+                    <div class="l-input">
+                        <form>
+                            <div class="username">
+                                <input type="text" class="border-bm input-color" placeholder="请填账户密码登录">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="passwoed">
+                                <input type="password" class="border-bm " placeholder="请输入密码">
+                                <i class="search icon"></i>
+                            </div>
+                            <p class="tip">*账户与密码不匹配,请重新输入</p>
+                            <div class="help">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" tabindex="0" class="hidden">
+                                    <label class="labcolor">两周内自动登录</label>
+                                </div>
+                                <a href="javascript:;">忘记密码 ?</a>
+                            </div>
+                            <div class="log">
+                                <button class="ui primary button">登录</button>
+                            </div>
+                            <div class="register">
+                                <a href="javascript:;">没有账号 ?</a> <a href="javascript:;" class="reg">去注册</a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="banner">
+            <a href="#"><img src="../home/images/banner-1.jpg" alt=""></a>
         </div>
     </div>
     <div class="u-footer">
@@ -127,7 +160,6 @@
 <script>
 $(function() {
     $('.ui.checkbox').checkbox();
-
     $("#h-icon").click(function() {
         $(".border-bm").animate({
             width: "250px"

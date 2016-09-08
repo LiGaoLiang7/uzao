@@ -17,10 +17,10 @@ gulp.task('server', function() {
     });
 });
 
-gulp.task('browser-sync', function(){
+gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy:'localhost',
-        files:['./**/*.css','./**/*.html']
+        proxy: 'localhost',
+        files: ['./**/*.css', './**/*.html']
     });
 });
 
@@ -64,7 +64,7 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(minifyCSS())
         .pipe(gulp.dest('./public/css'))
-        .pipe(reload({stream: true}));
+        .pipe(reload({ stream: true }));
 });
 
 gulp.task('sass-home', function() {
@@ -72,9 +72,15 @@ gulp.task('sass-home', function() {
         .pipe(sass())
         .pipe(minifyCSS())
         .pipe(gulp.dest('./home/css'))
-        .pipe(reload({stream: true}));
+        .pipe(reload({ stream: true }));
 });
-
+gulp.task('sass-front', function() {
+    return gulp.src('./front/sass/*.scss')
+        .pipe(sass())
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('./front/css'))
+        .pipe(reload({ stream: true }));
+});
 // 合并js
 gulp.task('scripts', function() {
     return gulp.src('./public/js/*.min.js')
@@ -99,6 +105,7 @@ gulp.task('html-front', function() {
 gulp.task('watch', function() {
     gulp.watch('./public/sass/*.scss', ['sass']);
     gulp.watch('./home/sass/*.scss', ['sass-home']);
+    gulp.watch('./front/sass/*.scss', ['sass-front']);
     gulp.watch('./home/*.html', ['html-home']);
 });
 

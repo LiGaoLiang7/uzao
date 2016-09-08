@@ -2,7 +2,6 @@
 
 @import 'globle.scss';
 .u-head {
-    width: 100%;
     line-height: 70px;
     text-align: center;
     font-size: 16px;
@@ -12,6 +11,8 @@
 .u-content {
     background-color: #f2f6f8;
     padding: 1.42857143em 0 2.85714286em ;
+    position: relative;
+    overflow: hidden;
 }
 
 .u-footer {
