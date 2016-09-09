@@ -1,13 +1,120 @@
 
 
 @import 'globle.scss';
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
+}
+
+.tac {
+    text-align: center;
+}
+
+.icon.focus-color {
+    color: #6e8e00 !important;
+}
+
+.main-color {
+    color: #6e8e00 !important;
+}
+
+.mian-font-color {
+    color: #45483d !important;
+}
+
+.sub-font-color {
+    color: #787d6a !important;
+}
+
+.waring-icon-color,
+.emphasize-color {
+    color: #de5c0f !important;
+}
+
+.fz16b {
+    font-size: 1.142857142857143rem;
+    font-weight: bold;
+}
+
+.fz18 {
+    font-size: 1.285714285714286rem;
+}
+
+.fz12 {
+    font-size: 0.8571428571428571rem;
+}
+
+.fwn {
+    font-weight: normal;
+}
+
+.fsn {
+    font-style: normal;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.fzroot {
+    font-size: 1rem !important;
+    font-weight: normal !important;
+}
+
+.mt15 {
+    margin-top: 1.071428571428571em !important;
+}
+
+.pt15 {
+    padding-top: 1.071428571428571em !important;
+}
+
+.pt20 {
+    padding-top: 1.428571428571429em;
+}
+
+.pt30 {
+    padding-top: 2.142857142857143em;
+}
+
+.pb30 {
+    padding-bottom: 2.142857142857143em;
+}
+
+.must {
+    position: relative;
+    padding-left: 6px;
+}
+
+.must::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #de5c0f;
+    top: 2px;
+}
 .u-head {
     line-height: 70px;
     text-align: center;
     font-size: 16px;
     background-color: #fff
 }
-
+input[placeholder] {
+    color: #45483d;
+}
 .u-content {
     background-color: #f2f6f8;
     padding: 1.42857143em 0 2.85714286em ;
@@ -63,14 +170,19 @@
     border-bottom:2px solid $btn-submit-bg-color ;
 }
 .h-search{position: relative;height: 70px;margin-left: 15px;}
-.border-bm{
-    width:0;
-    padding:  0.678614em 0 !important;
-    box-sizing: border-box;
-    border-radius: 0 !important;
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
+.h-search .ui.input input.border-bm{
+    width: 0;
+    padding:  0.678614em 0;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+}
+.h-search .ui.input>i{
+    cursor: pointer;
+}
+.h-search .ui.input input:focus{
+    border-bottom: 1px solid #bae71e;
+
 }
 .ui.input > i.icons{position: absolute;left: 0;bottom: 38px;} 
 .list-color {

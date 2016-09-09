@@ -1,7 +1,9 @@
 /**************************login bg********************************/
-.login-min-height{
+
+.login-min-height {
     min-height: 522px;
 }
+
 .banner {
     position: relative;
     height: 600px;
@@ -10,9 +12,10 @@
 .banner img {
     position: absolute;
     left: 50%;
-    top:0;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     z-index: 0;
 }
 
@@ -20,17 +23,18 @@
     z-index: 2;
     position: absolute;
     left: 50%;
-    top:0;
+    top: 0;
     pointer-events: none;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
 }
 
 .loginbox>div {
     width: 360px;
     background-color: #fff;
     float: right;
-    pointer-events:auto;
+    pointer-events: auto;
     margin-top: 20px;
     padding-bottom: 67px;
 }
@@ -77,24 +81,43 @@
 
 .l-title label {
     padding: 5px 0;
-    margin: 0 20px;
     cursor: pointer;
-}
-.l-title label:active,.l-title label:focus{
-     color: #45483d;
-    border-bottom: 2px solid #bae71e;
-}
-.l-input input {
-    width: 250px;
-    padding-left: 20px !important;
+    font-size: 1rem;
 }
 
-.input-color {
+.l-title label:active,
+.l-title label:focus,
+.l-title label.active {
+    color: #45483d;
+    border-bottom: 2px solid #bae71e;
+}
+
+.l-input .border-bm {
+    padding: 0.678614em 0;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.l-input input {
+    width: 250px;
+    padding-left: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.l-input input[placeholder] {
+    padding-left: 10px;
+}
+
+.l-input input[type="text"]:focus,
+.l-input input[type="password"]:focus {
     border-bottom: 1px solid #bae71e;
 }
-.l-input{
+
+.l-input {
     display: none;
 }
+
 .l-input>form>div {
     position: relative;
 }
@@ -129,8 +152,18 @@
     margin-left: 54px;
 }
 
-.l-input .help .checkbox label:before {
+.l-input .help label:before {
     border-color: #6e8e00;
+}
+
+.l-input .password {
+    position: relative;
+}
+
+.l-input .verycode {
+    position: absolute;
+    right: 0;
+    top: 8px;
 }
 
 .log>button {
@@ -147,36 +180,16 @@
     color: #6e8e00;
 }
 
-//2
-//input{color: rgba(0,0,0,0.55) !important;}
-input[placeholder] {
+.tab:checked:nth-of-type(1) ~ .l-input:nth-of-type(1),
+.tab:checked:nth-of-type(2) ~ .l-input:nth-of-type(2) {
+    display: block;
+}
+
+.tab:checked:nth-of-type(1) ~ .l-title>label:nth-of-type(1),
+.tab:checked:nth-of-type(2) ~ .l-title>label:nth-of-type(2) {
     color: #45483d;
+    border-bottom: 2px solid #bae71e;
 }
 
-.l-input .passwoed {
-    position: relative;
-}
 
-.captcha {
-    position: absolute;
-    font-style: normal;
-    bottom: 10px;
-    right: 3px;
-    color: #ccc;
-}
-
-.captcha>a {
-    color: #ccc;
-}
-
-.captcha>.naw-captcha {
-    color: #6e8e00;
-}
-
-.tab:checked:nth-of-type(1) ~ .l-input:nth-of-type(1){
-    display: block;
-}
-.tab:checked:nth-of-type(2) ~ .l-input:nth-of-type(2){
-    display: block;
-}
 /**************************login end********************************/
